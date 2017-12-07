@@ -6,7 +6,11 @@ def calculateChecksum(matrix):
 
 if __name__ == "__main__":
   inputFile = open("input.txt", "r")
-  matrix = [map(int, line.split()) for line in inputFile]
-  inputFile.close()
+  matrix = []
+  for line in inputFile:
+    row = []
+    for elem in line.split():
+      row.append(int(elem))
+    matrix.append(row)
   print(calculateChecksum(matrix))
 
