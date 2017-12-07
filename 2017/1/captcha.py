@@ -12,6 +12,6 @@ def calculateDuplicatesSum(line):
 
 if __name__ == "__main__":
   inputFile = open("input.txt", "r")
-  line = inputFile.readline()
+  line = inputFile.readline().strip()
   sum = calculateDuplicatesSum(line)
   print(str(sum))
